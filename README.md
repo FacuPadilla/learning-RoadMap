@@ -14,3 +14,5 @@ Iniciá el entorno de desarrollo:
 npm run dev
 
 Abrí la URL que te muestre la terminal (por defecto suele ser http://localhost:5173).
+
+Link de deploy con Vercel: https://learning-road-map-9y7q.vercel.app/
