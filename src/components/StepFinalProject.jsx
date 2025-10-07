@@ -3,6 +3,7 @@ import { Star, Timer, BookOpenCheck } from "lucide-react";
 import { Pill, StatusPill, SubtaskBadge, EASE, getProgress } from "./Commons";
 import Lottie from "lottie-react";
 import step7Anim from "../assets/Step7.json";
+import SubtasksAccordion from "./SubtasksAccordion";
 
 export default function StepFinalProject({ step, index }) {
   const { title, subtasks = [], status } = step;
@@ -77,15 +78,14 @@ export default function StepFinalProject({ step, index }) {
             </Pill>
           </div>
 
-          <div className="mt-6 sm:mt-8">
-            <h4 className="text-sm sm:text-base text-white/90 font-semibold">
-              Entregables
-            </h4>
-            <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
-              {subtasks.map((st, i) => (
-                <SubtaskBadge key={i} st={st} />
-              ))}
-            </div>
+          {/* Contenidos (subtasks) vínculados a tu JSON */}
+          <div className="mt-8">
+            <h4 className="text-white/90 font-semibold">Entregables</h4>
+            <SubtasksAccordion
+              items={subtasks}
+              singleOpen={true} //  true para abrir solo uno a la vez
+              fallbackDescription="Descripción en preparación."
+            />
           </div>
         </motion.div>
 

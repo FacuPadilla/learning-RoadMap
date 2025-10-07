@@ -11,6 +11,7 @@ import {
   EASE,
   getProgress,
 } from "./Commons";
+import SubtasksAccordion from "./SubtasksAccordion";
 
 export default function StepHTML({ step, index }) {
   const { title, subtasks = [], status } = step;
@@ -111,11 +112,11 @@ export default function StepHTML({ step, index }) {
             <h4 className="text-white/90 font-semibold">
               Contenidos del módulo
             </h4>
-            <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {subtasks.map((st, i) => (
-                <SubtaskBadge key={i} st={st} />
-              ))}
-            </div>
+            <SubtasksAccordion
+              items={subtasks}
+              singleOpen={true} //  true para abrir solo uno a la vez
+              fallbackDescription="Descripción en preparación."
+            />
           </div>
         </motion.div>
       </div>
