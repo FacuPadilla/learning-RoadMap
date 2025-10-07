@@ -1,5 +1,5 @@
 // src/App.jsx
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import HeroSection from "./pages/HeroSection";
 import RoadmapSection from "./pages/RoadMapSection";
 import Footer from "./components/Footer";
