@@ -1,10 +1,10 @@
 // src/components/StepReact.jsx
 import { motion, useScroll, useTransform } from "framer-motion";
 import Lottie from "lottie-react";
-import stepReactAnim from "../assets/Step6.json";
+import stepReactAnim from "../../assets/Step6.json";
 import { Atom, Settings2, PlugZap, Zap } from "lucide-react";
-import { Pill, StatusPill, SubtaskBadge, EASE, getProgress } from "./Commons";
-import SubtasksAccordion from "./SubtasksAccordion";
+import { Pill, StatusPill, SubtaskBadge, EASE, getProgress } from "../Commons";
+import SubtasksAccordion from "../SubtasksAccordion";
 
 export default function StepReact({ step, index }) {
   const { title, subtasks = [], status } = step;

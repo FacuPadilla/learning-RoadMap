@@ -10,8 +10,8 @@ import {
   FunctionSquare,
   Repeat,
 } from "lucide-react";
-import { Pill, StatusPill, SubtaskBadge, EASE, getProgress } from "./Commons";
-import SubtasksAccordion from "./SubtasksAccordion";
+import { Pill, StatusPill, SubtaskBadge, EASE, getProgress } from "../Commons";
+import SubtasksAccordion from "../SubtasksAccordion";
 
 /** Visual: Code Preview animado */
 function TypingLine({ text, delay = 0, idx = 0 }) {

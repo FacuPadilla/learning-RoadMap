@@ -1,9 +1,9 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Star, Timer, BookOpenCheck } from "lucide-react";
-import { Pill, StatusPill, SubtaskBadge, EASE, getProgress } from "./Commons";
+import { Pill, StatusPill, SubtaskBadge, EASE, getProgress } from "../Commons";
 import Lottie from "lottie-react";
-import step7Anim from "../assets/Step7.json";
-import SubtasksAccordion from "./SubtasksAccordion";
+import step7Anim from "../../assets/Step7.json";
+import SubtasksAccordion from "../SubtasksAccordion";
 
 export default function StepFinalProject({ step, index }) {
   const { title, subtasks = [], status } = step;

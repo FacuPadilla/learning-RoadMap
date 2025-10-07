@@ -1,7 +1,7 @@
 // src/components/StepCSSIntro.jsx
 import { motion, useScroll, useTransform } from "framer-motion";
 import Lottie from "lottie-react";
-import step2Anim from "../assets/Step2.json";
+import step2Anim from "../../assets/Step2.json";
 import { Timer, BookOpenCheck, Star } from "lucide-react";
 import {
   Pill,
@@ -10,8 +10,8 @@ import {
   STATUS_STYLES,
   EASE,
   getProgress,
-} from "./Commons";
-import SubtasksAccordion from "./SubtasksAccordion";
+} from "../Commons";
+import SubtasksAccordion from "../SubtasksAccordion";
 
 export default function StepCSSIntro({ step, index }) {
   const { title, subtasks = [], status } = step;

@@ -218,7 +218,7 @@ export const roadmapData = {
         },
         {
           id: 25,
-          name: "Implementación del frontend",
+          name: "Estructura frontend",
           status: "pending",
           description:
             "Estructura de carpetas, estilos, componentes y estándares de calidad.",

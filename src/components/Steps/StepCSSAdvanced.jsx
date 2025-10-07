@@ -1,7 +1,7 @@
-// src/components/StepHTML.jsx
+// src/components/StepCSSAdvanced.jsx
 import { motion, useScroll, useTransform } from "framer-motion";
+import step3Anim from "../../assets/Step3.json";
 import Lottie from "lottie-react";
-import step1Anim from "../assets/Step1.json";
 import { Star, Timer, BookOpenCheck } from "lucide-react";
 import {
   Pill,
@@ -10,13 +10,13 @@ import {
   STATUS_STYLES,
   EASE,
   getProgress,
-} from "./Commons";
-import SubtasksAccordion from "./SubtasksAccordion";
+} from "../Commons";
+import SubtasksAccordion from "../SubtasksAccordion";
 
-export default function StepHTML({ step, index }) {
+export default function StepCSSAdvanced({ step, index }) {
   const { title, subtasks = [], status } = step;
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], [0, 40]);
+  const parallaxY = useTransform(scrollYProgress, [0, 1], [0, 40]);
 
   const progress = getProgress(subtasks);
 
@@ -24,7 +24,7 @@ export default function StepHTML({ step, index }) {
     <section className="relative px-6 sm:px-8 lg:px-12 py-14 sm:py-20">
       {/* Glow de fondo */}
       <motion.div
-        style={{ y }}
+        style={{ y: parallaxY }}
         className="pointer-events-none absolute inset-0 -z-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -45,17 +45,18 @@ export default function StepHTML({ step, index }) {
         >
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden  ">
             <Lottie
-              animationData={step1Anim}
+              animationData={step3Anim}
               loop
+              speed={0.5}
               autoplay
-              style={{ width: "100%", height: "80%" }}
-              aria-label="Animación del módulo"
+              aria-label="Animación CSS Advanced"
+              style={{ width: "100%", height: "100%" }}
               rendererSettings={{ preserveAspectRatio: "xMidYMid slice" }}
             />
           </div>
         </motion.div>
 
-        {/* Contenido (alineado a STEP 2) */}
+        {/* Contenido (alineado a Steps 1 y 2) */}
         <motion.div
           initial={{ opacity: 0, x: -24 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -66,7 +67,7 @@ export default function StepHTML({ step, index }) {
           {/* Meta header */}
           <div className="flex flex-wrap items-center gap-3">
             <Pill>
-              <Star className="w-4 h-4 text-accent-400" />
+              <Star className="w-4 h-4 text-primary-300" />
               Step {index + 1}
             </Pill>
             <StatusPill status={status} />
@@ -87,23 +88,23 @@ export default function StepHTML({ step, index }) {
           </h2>
 
           <p className="mt-4 text-lg text-white/90 font-medium">
-            Construí la base semántica de cualquier sitio con HTML.
+            Diseñá layouts robustos y fluidos con técnicas modernas de CSS.
           </p>
           <p className="mt-3 text-white/70 max-w-xl leading-relaxed">
-            Entendé la estructura del documento, usá etiquetas semánticas
-            correctas y definí formularios accesibles para que el contenido sea
-            claro y escalable.
+            Domina Flexbox para alineaciones precisas, usa Grid para
+            composiciones complejas y aplicá animaciones y transiciones para
+            comunicar estados con elegancia.
           </p>
 
-          {/* Prerrequisito + Duración (alineado a Step 2) */}
+          {/* Prerrequisito + Duración */}
           <div className="mt-5 flex flex-wrap items-center gap-3">
             <Pill>
-              <BookOpenCheck className="w-4 h-4 text-accent-400" />
-              Prerrequisito: Ninguno
+              <BookOpenCheck className="w-4 h-4 text-primary-300" />
+              Prerrequisito: Introducción a CSS
             </Pill>
             <Pill>
-              <Timer className="w-4 h-4 text-accent-400" />
-              Duración estimada: 4–6 h
+              <Timer className="w-4 h-4 text-secondary-300" />
+              Duración estimada: 8–10 h
             </Pill>
           </div>
 

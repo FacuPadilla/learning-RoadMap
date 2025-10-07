@@ -2,13 +2,13 @@
 import React, { Suspense } from "react";
 import { roadmapData } from "../data/roadmapData";
 
-import StepHTML from "../components/StepHTML";
-import StepCSSIntro from "../components/StepCSSIntro";
-import StepJSBasic from "../components/StepJSBasic";
-import StepCSSAdvanced from "../components/StepCSSAdvanced";
-import StepJSIntermediate from "../components/StepJSIntermediate";
-import StepReact from "../components/StepReact";
-import StepFinalProject from "../components/StepFinalProject";
+import StepHTML from "../components/Steps/StepHTML";
+import StepCSSIntro from "../components/Steps/StepCSSIntro";
+import StepJSBasic from "../components/Steps/StepJSBasic";
+import StepCSSAdvanced from "../components/Steps/StepCSSAdvanced";
+import StepJSIntermediate from "../components/Steps/StepJSIntermediate";
+import StepReact from "../components/Steps/StepReact";
+import StepFinalProject from "../components/Steps/StepFinalProject";
 
 function StepFallback({ step }) {
   return (

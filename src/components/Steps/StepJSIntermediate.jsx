@@ -2,8 +2,8 @@
 import { useMemo } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Star, Timer, BookOpenCheck } from "lucide-react";
-import { Pill, StatusPill, SubtaskBadge, EASE, getProgress } from "./Commons";
-import SubtasksAccordion from "./SubtasksAccordion";
+import { Pill, StatusPill, SubtaskBadge, EASE, getProgress } from "../Commons";
+import SubtasksAccordion from "../SubtasksAccordion";
 
 /* ===================== Code Preview (animación al render) ===================== */
 
